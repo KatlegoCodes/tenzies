@@ -1,7 +1,13 @@
+import Die from "./My Components/Die";
+
 const App = () => {
+  const dieValue = 1;
+
   return (
     <>
-      <main className="main"></main>
+      <main className="main">
+        <Die value={dieValue} />
+      </main>
     </>
   );
 };
