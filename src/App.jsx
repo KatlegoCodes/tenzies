@@ -1,12 +1,21 @@
-import Die from "./My Components/Die";
+import Die from "./MyComponents/Die";
 
 const App = () => {
-  const dieValue = 1;
-
   return (
     <>
       <main className="main">
-        <Die value={dieValue} />
+        <div className="container">
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+          <Die value={1} />
+        </div>
       </main>
     </>
   );
