@@ -13,10 +13,16 @@ const App = () => {
     return <Die key={index} value={die} />;
   });
 
+  const roll = () => {
+    setDieValue(AllNewDice());
+  };
+
   return (
     <>
       <main className="main">
         <div className="container">{diceElements}</div>
+
+        <button onClick={roll}>Roll</button>
       </main>
     </>
   );
