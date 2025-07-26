@@ -22,7 +22,9 @@ const App = () => {
       <main className="main">
         <div className="container">{diceElements}</div>
 
-        <button onClick={roll}>Roll</button>
+        <button className="dice-roll" onClick={roll}>
+          Roll
+        </button>
       </main>
     </>
   );

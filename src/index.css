@@ -5,6 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Inter";
 }
 
 .main {  
@@ -36,4 +37,17 @@ button {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+}
+
+.dice-roll {
+  height: 40px;
+  width: 80px;
+  background-color: rgb(202, 62, 62);
+  color: white;
+  margin-top: 20px;
+}
+
+
+.dice-roll:active {
+  background-color: rgb(247, 89, 89);
 }
