@@ -7,7 +7,7 @@ const App = () => {
     return new Array(10).fill(0).map(() => {
       return {
         value: Math.ceil(Math.random() * 6),
-        isHeld: false,
+        isHeld: true,
         id: nanoid(),
       };
     });
