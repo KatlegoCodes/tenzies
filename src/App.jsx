@@ -15,11 +15,22 @@ const App = () => {
   const [dieValue, setDieValue] = useState(AllNewDice());
 
   const diceElements = dieValue.map((die) => {
-    return <Die key={die.id} value={die.value} isHeld={die.isHeld} />;
+    return (
+      <Die
+        key={die.id}
+        value={die.value}
+        isHeld={die.isHeld}
+        onClick={() => hold(die.id)}
+      />
+    );
   });
 
   const roll = () => {
     setDieValue(AllNewDice());
+  };
+
+  const hold = (id) => {
+    console.log(id);
   };
 
   return (
