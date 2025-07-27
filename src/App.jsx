@@ -26,7 +26,13 @@ const App = () => {
   });
 
   const roll = () => {
-    setDieValue(AllNewDice());
+    setDieValue((prevDieValue) => {
+      return prevDieValue.map((die) => {
+        return die.isHeld
+          ? die
+          : { ...die, value: Math.ceil(Math.random() * 6) };
+      });
+    });
   };
 
   const hold = (id) => {
@@ -40,6 +46,11 @@ const App = () => {
   return (
     <>
       <main className="main">
+        <h1 className="title">Tenzies</h1>
+        <p className="instructions">
+          Roll until all dice are the same. Click each die to freeze it at its
+          current value between rolls.
+        </p>
         <div className="container">{diceElements}</div>
 
         <button className="dice-roll" onClick={roll}>
