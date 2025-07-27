@@ -7,7 +7,7 @@ const App = () => {
     return new Array(10).fill(0).map(() => {
       return {
         value: Math.ceil(Math.random() * 6),
-        isHeld: true,
+        isHeld: false,
         id: nanoid(),
       };
     });
@@ -30,7 +30,11 @@ const App = () => {
   };
 
   const hold = (id) => {
-    console.log(id);
+    setDieValue((prevDieValue) => {
+      return prevDieValue.map((die) => {
+        return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
+      });
+    });
   };
 
   return (
