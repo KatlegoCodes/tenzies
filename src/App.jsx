@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Die from "./MyComponents/Die";
 import { nanoid } from "nanoid";
-
+import ReactConfetti from "react-confetti";
 const App = () => {
   const AllNewDice = () => {
     return new Array(10).fill(0).map(() => {
@@ -50,6 +50,7 @@ const App = () => {
   return (
     <>
       <main className="main">
+        {gameWon && <ReactConfetti />}
         <h1 className="title">Tenzies</h1>
         <p className="instructions">
           Roll until all dice are the same. Click each die to freeze it at its
