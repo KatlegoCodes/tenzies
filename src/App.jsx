@@ -2,6 +2,7 @@ import { useState } from "react";
 import Die from "./MyComponents/Die";
 import { nanoid } from "nanoid";
 import ReactConfetti from "react-confetti";
+
 const App = () => {
   const AllNewDice = () => {
     return new Array(10).fill(0).map(() => {
@@ -47,6 +48,10 @@ const App = () => {
     });
   };
 
+  const resetGame = () => {
+    setDieValue(AllNewDice());
+  };
+
   return (
     <>
       <main className="main">
@@ -58,7 +63,7 @@ const App = () => {
         </p>
         <div className="container">{diceElements}</div>
 
-        <button className="dice-roll" onClick={roll}>
+        <button className="dice-roll" onClick={gameWon ? resetGame : roll}>
           {gameWon ? "New Game" : "Roll"}
         </button>
       </main>
