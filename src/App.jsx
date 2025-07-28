@@ -12,7 +12,7 @@ const App = () => {
       };
     });
   };
-  const [dieValue, setDieValue] = useState(AllNewDice());
+  const [dieValue, setDieValue] = useState(() => AllNewDice());
 
   const gameWon =
     dieValue.every((die) => die.isHeld) &&
