@@ -41,11 +41,13 @@ button {
 }
 
 .dice-roll {
-  height: 40px;
-  width: 80px;
+  height: 60px;
+  width: 100px;
+  font-family: "Inter";
   background-color: hsl(224, 57%, 52%);
   color: white;
-  margin-top: 20px;
+  margin-top: 40px;
+  font-size: 20px;
 }
 
 
