@@ -14,6 +14,13 @@ const App = () => {
   };
   const [dieValue, setDieValue] = useState(AllNewDice());
 
+  if (
+    dieValue.every((die) => die.isHeld) &&
+    dieValue.every((die) => die.value === dieValue[0].value)
+  ) {
+    console.log("You Won!");
+  }
+
   const diceElements = dieValue.map((die) => {
     return (
       <Die
